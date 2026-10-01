@@ -1,4 +1,165 @@
-ALB01.jpeg
-ALB02.JPG
-ALB03.jpg
-ALBV01.mov
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Ashley ♡</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background: #fff8f6;
+        color: #4b3535;
+        font-family: Georgia, serif;
+    }
+
+    /* OPENING SCREEN */
+    .opening {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .opening h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+    }
+
+    .opening p {
+        font-size: 18px;
+        opacity: 0.7;
+    }
+
+    .scroll {
+        margin-top: 50px;
+        font-size: 14px;
+        animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+        50% {
+            transform: translateY(8px);
+        }
+    }
+
+    /* COLLAGE */
+    .memories {
+        max-width: 650px;
+        margin: auto;
+        padding: 20px 20px 100px;
+    }
+
+    .memory {
+        background: white;
+        padding: 12px 12px 35px;
+        margin: 50px auto;
+        width: 90%;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+        border-radius: 4px;
+    }
+
+    .memory:nth-child(odd) {
+        transform: rotate(-2deg);
+    }
+
+    .memory:nth-child(even) {
+        transform: rotate(2deg);
+    }
+
+    .memory img,
+    .memory video {
+        width: 100%;
+        display: block;
+        border-radius: 2px;
+    }
+
+    .caption {
+        text-align: center;
+        margin-top: 18px;
+        font-size: 17px;
+    }
+
+    .ending {
+        text-align: center;
+        padding: 80px 30px 120px;
+    }
+
+    .ending h2 {
+        font-size: 32px;
+    }
+</style>
+</head>
+
+
+<body>
+
+<section class="opening">
+    <h1>Happy Birthday Ashley ♡</h1>
+
+    <p>
+        A little collection of us.
+    </p>
+
+    <div class="scroll">
+        scroll down ↓
+    </div>
+</section>
+
+
+<section class="memories">
+
+    <div class="memory">
+        <img src="ALB01.jpeg">
+        <div class="caption">
+            where it all began ♡
+        </div>
+    </div>
+
+
+    <div class="memory">
+        <img src="ALB02.JPG">
+        <div class="caption">
+            one of my favourite memories
+        </div>
+    </div>
+
+
+    <div class="memory">
+        <video controls playsinline>
+            <source src="ALBV01.mov" type="video/quicktime">
+        </video>
+
+        <div class="caption">
+            us being us :)
+        </div>
+    </div>
+
+
+    <div class="memory">
+        <img src="ALB03.jpg">
+        <div class="caption">
+            wouldn't trade these memories for anything
+        </div>
+    </div>
+
+</section>
+
+
+<section class="ending">
+    <h2>and there's so much more to come ♡</h2>
+
+    <p>Happy Birthday Ashley.</p>
+</section>
+
+
+</body>
+</html>
