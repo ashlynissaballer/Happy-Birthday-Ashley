@@ -24,51 +24,37 @@ body {
     color: #4b3535;
 }
 
-
 /* OPENING SCREEN */
 
 #opening {
     position: fixed;
     inset: 0;
     background: #fff8f6;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
     padding: 30px;
-
     z-index: 100;
     transition: opacity 1s ease;
 }
 
 #opening h1 {
     font-size: 42px;
-    margin: 0 0 15px;
-}
-
-#opening p {
-    font-size: 17px;
-    opacity: 0.7;
-    margin-bottom: 35px;
+    margin: 0 0 35px;
 }
 
 #startButton {
     border: none;
     background: #4b3535;
     color: white;
-
     font-family: Georgia, serif;
     font-size: 17px;
-
     padding: 15px 30px;
     border-radius: 50px;
-
     cursor: pointer;
 }
-
 
 /* PHOTO GALLERY */
 
@@ -83,7 +69,6 @@ body {
     padding: 10px;
     margin: 45px auto;
     width: 92%;
-
     box-shadow: 0 8px 25px rgba(0,0,0,0.12);
     border-radius: 3px;
 }
@@ -95,7 +80,6 @@ body {
     border-radius: 2px;
 }
 
-
 /* ALTERNATING TILT */
 
 .photo:nth-child(odd) {
@@ -106,8 +90,7 @@ body {
     transform: rotate(1.5deg);
 }
 
-
-/* ENDING */
+/* END */
 
 .end {
     text-align: center;
@@ -122,24 +105,20 @@ body {
 </style>
 </head>
 
-
 <body>
 
+<!-- MUSIC -->
 
-<!-- YOUR SONG -->
-
-<audio id="music" loop>
+<audio id="music" loop preload="auto">
     <source src="VultureCity.mp3.mp3" type="audio/mpeg">
 </audio>
 
 
-<!-- OPENING -->
+<!-- OPENING SCREEN -->
 
 <div id="opening">
 
     <h1>Happy Birthday Ashley ♡</h1>
-
-    <p>I made something for you.</p>
 
     <button id="startButton" onclick="startMemory()">
         tap to begin ♡
@@ -148,21 +127,60 @@ body {
 </div>
 
 
-<!-- PHOTOS -->
+<!-- PHOTO GALLERY -->
 
 <div class="gallery">
 
-    <div class="photo">
-        <img src="ALB01.jpeg" alt="">
-    </div>
+    <div class="photo"><img src="ALB01.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB02.JPG" alt=""></div>
+    <div class="photo"><img src="ALB03.jpg" alt=""></div>
+    <div class="photo"><img src="ALB04.jpg" alt=""></div>
+    <div class="photo"><img src="ALB05.jpg" alt=""></div>
+    <div class="photo"><img src="ALB06.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB07.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB08.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB09.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB10.JPG" alt=""></div>
 
-    <div class="photo">
-        <img src="ALB02.JPG" alt="">
-    </div>
+    <div class="photo"><img src="ALB11.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB12.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB13.JPG" alt=""></div>
+    <div class="photo"><img src="ALB14.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB15.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB16.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB17.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB18.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB19.JPG" alt=""></div>
+    <div class="photo"><img src="ALB20.jpeg" alt=""></div>
 
-    <div class="photo">
-        <img src="ALB03.jpg" alt="">
-    </div>
+    <div class="photo"><img src="ALB21.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB22.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB23.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB24.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB25.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB26.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB27.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB28.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB29.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB30.jpeg" alt=""></div>
+
+    <div class="photo"><img src="ALB31.JPG" alt=""></div>
+    <div class="photo"><img src="ALB32.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB33.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB34.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB35.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB36.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB37.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB38.jpeg" alt=""></div>
+    <div class="photo"><img src="ALB39.jpg" alt=""></div>
+    <div class="photo"><img src="ALB40.jpg" alt=""></div>
+
+    <div class="photo"><img src="ALB41.jpg" alt=""></div>
+    <div class="photo"><img src="ALB42.jpg" alt=""></div>
+    <div class="photo"><img src="ALB43.jpg" alt=""></div>
+    <div class="photo"><img src="ALB44.jpg" alt=""></div>
+    <div class="photo"><img src="ALB45.jpg" alt=""></div>
+    <div class="photo"><img src="ALB46.jpg" alt=""></div>
 
 </div>
 
@@ -181,10 +199,8 @@ function startMemory() {
     const opening = document.getElementById("opening");
     const music = document.getElementById("music");
 
-    /* START SONG */
     music.play();
 
-    /* FADE OPENING SCREEN */
     opening.style.opacity = "0";
 
     setTimeout(function() {
@@ -193,7 +209,6 @@ function startMemory() {
 }
 
 </script>
-
 
 </body>
 </html>
