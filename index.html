@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,158 +8,212 @@
 <title>Happy Birthday Ashley ♡</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
 
-    body {
-        margin: 0;
-        background: #fff8f6;
-        color: #4b3535;
-        font-family: Georgia, serif;
-    }
+* {
+    box-sizing: border-box;
+}
 
-    /* OPENING SCREEN */
-    .opening {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 30px;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    .opening h1 {
-        font-size: 42px;
-        margin-bottom: 10px;
-    }
+body {
+    margin: 0;
+    background: #fff8f6;
+    font-family: Georgia, serif;
+    color: #4b3535;
+}
 
-    .opening p {
-        font-size: 18px;
-        opacity: 0.7;
-    }
 
-    .scroll {
-        margin-top: 50px;
-        font-size: 14px;
-        animation: bounce 1.5s infinite;
-    }
+/* ---------- OPENING SCREEN ---------- */
 
-    @keyframes bounce {
-        50% {
-            transform: translateY(8px);
-        }
-    }
+#opening {
+    position: fixed;
+    inset: 0;
+    background: #fff8f6;
 
-    /* COLLAGE */
-    .memories {
-        max-width: 650px;
-        margin: auto;
-        padding: 20px 20px 100px;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    .memory {
-        background: white;
-        padding: 12px 12px 35px;
-        margin: 50px auto;
-        width: 90%;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.10);
-        border-radius: 4px;
-    }
+    text-align: center;
+    padding: 30px;
 
-    .memory:nth-child(odd) {
-        transform: rotate(-2deg);
-    }
+    z-index: 100;
+    transition: opacity 1s ease;
+}
 
-    .memory:nth-child(even) {
-        transform: rotate(2deg);
-    }
+#opening h1 {
+    font-size: 42px;
+    margin: 0 0 15px;
+}
 
-    .memory img,
-    .memory video {
-        width: 100%;
-        display: block;
-        border-radius: 2px;
-    }
+#opening p {
+    font-size: 17px;
+    opacity: 0.7;
+    margin-bottom: 35px;
+}
 
-    .caption {
-        text-align: center;
-        margin-top: 18px;
-        font-size: 17px;
-    }
+#startButton {
+    border: none;
+    background: #4b3535;
+    color: white;
 
-    .ending {
-        text-align: center;
-        padding: 80px 30px 120px;
-    }
+    font-family: Georgia, serif;
+    font-size: 17px;
 
-    .ending h2 {
-        font-size: 32px;
-    }
+    padding: 15px 30px;
+    border-radius: 50px;
+
+    cursor: pointer;
+}
+
+
+/* ---------- PHOTO COLLAGE ---------- */
+
+.gallery {
+    max-width: 650px;
+    margin: auto;
+
+    padding: 50px 18px 120px;
+}
+
+.photo {
+    background: white;
+
+    padding: 10px;
+
+    margin: 45px auto;
+
+    width: 92%;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+
+    border-radius: 3px;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    border-radius: 2px;
+}
+
+
+/* Make photos slightly tilted */
+
+.photo:nth-child(odd) {
+    transform: rotate(-1.5deg);
+}
+
+.photo:nth-child(even) {
+    transform: rotate(1.5deg);
+}
+
+
+/* ---------- END ---------- */
+
+.end {
+    text-align: center;
+    padding: 30px 30px 120px;
+}
+
+.end h2 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
 </style>
+
 </head>
 
 
 <body>
 
-<section class="opening">
+
+<!-- MUSIC -->
+
+<audio id="music" loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+
+
+<!-- OPENING SCREEN -->
+
+<div id="opening">
+
     <h1>Happy Birthday Ashley ♡</h1>
 
     <p>
-        A little collection of us.
+        I made something for you.
     </p>
 
-    <div class="scroll">
-        scroll down ↓
-    </div>
-</section>
+    <button id="startButton" onclick="startMemory()">
+        tap to begin ♡
+    </button>
+
+</div>
 
 
-<section class="memories">
 
-    <div class="memory">
+<!-- PHOTOS -->
+
+<div class="gallery">
+
+    <div class="photo">
         <img src="ALB01.jpeg">
-        <div class="caption">
-            where it all began ♡
-        </div>
     </div>
 
 
-    <div class="memory">
+    <div class="photo">
         <img src="ALB02.JPG">
-        <div class="caption">
-            one of my favourite memories
-        </div>
     </div>
 
 
-    <div class="memory">
-        <video controls playsinline>
-            <source src="ALBV01.mov" type="video/quicktime">
-        </video>
-
-        <div class="caption">
-            us being us :)
-        </div>
-    </div>
-
-
-    <div class="memory">
+    <div class="photo">
         <img src="ALB03.jpg">
-        <div class="caption">
-            wouldn't trade these memories for anything
-        </div>
     </div>
 
-</section>
+</div>
 
 
-<section class="ending">
-    <h2>and there's so much more to come ♡</h2>
 
-    <p>Happy Birthday Ashley.</p>
-</section>
+<!-- END -->
+
+<div class="end">
+
+    <h2>Happy Birthday ♡</h2>
+
+</div>
+
+
+
+<script>
+
+function startMemory() {
+
+    const opening = document.getElementById("opening");
+    const music = document.getElementById("music");
+
+    /* Start the music */
+    music.play().catch(function(error) {
+        console.log("Music could not start:", error);
+    });
+
+    /* Fade away opening screen */
+    opening.style.opacity = "0";
+
+    setTimeout(function() {
+        opening.style.display = "none";
+    }, 1000);
+
+}
+
+</script>
 
 
 </body>
