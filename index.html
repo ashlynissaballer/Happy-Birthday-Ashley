@@ -25,7 +25,7 @@ body {
 }
 
 
-/* ---------- OPENING SCREEN ---------- */
+/* OPENING SCREEN */
 
 #opening {
     position: fixed;
@@ -70,40 +70,33 @@ body {
 }
 
 
-/* ---------- PHOTO COLLAGE ---------- */
+/* PHOTO GALLERY */
 
 .gallery {
     max-width: 650px;
     margin: auto;
-
     padding: 50px 18px 120px;
 }
 
 .photo {
     background: white;
-
     padding: 10px;
-
     margin: 45px auto;
-
     width: 92%;
 
     box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-
     border-radius: 3px;
 }
 
 .photo img {
     width: 100%;
     height: auto;
-
     display: block;
-
     border-radius: 2px;
 }
 
 
-/* Make photos slightly tilted */
+/* ALTERNATING TILT */
 
 .photo:nth-child(odd) {
     transform: rotate(-1.5deg);
@@ -114,7 +107,7 @@ body {
 }
 
 
-/* ---------- END ---------- */
+/* ENDING */
 
 .end {
     text-align: center;
@@ -127,30 +120,26 @@ body {
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- MUSIC -->
+<!-- YOUR SONG -->
 
 <audio id="music" loop>
-    <source src="song.mp3" type="audio/mpeg">
+    <source src="VultureCity.mp3" type="audio/mpeg">
 </audio>
 
 
-
-<!-- OPENING SCREEN -->
+<!-- OPENING -->
 
 <div id="opening">
 
     <h1>Happy Birthday Ashley ♡</h1>
 
-    <p>
-        I made something for you.
-    </p>
+    <p>I made something for you.</p>
 
     <button id="startButton" onclick="startMemory()">
         tap to begin ♡
@@ -159,37 +148,30 @@ body {
 </div>
 
 
-
 <!-- PHOTOS -->
 
 <div class="gallery">
 
     <div class="photo">
-        <img src="ALB01.jpeg">
+        <img src="ALB01.jpeg" alt="">
     </div>
 
-
     <div class="photo">
-        <img src="ALB02.JPG">
+        <img src="ALB02.JPG" alt="">
     </div>
 
-
     <div class="photo">
-        <img src="ALB03.jpg">
+        <img src="ALB03.jpg" alt="">
     </div>
 
 </div>
-
 
 
 <!-- END -->
 
 <div class="end">
-
     <h2>Happy Birthday ♡</h2>
-
 </div>
-
 
 
 <script>
@@ -199,18 +181,15 @@ function startMemory() {
     const opening = document.getElementById("opening");
     const music = document.getElementById("music");
 
-    /* Start the music */
-    music.play().catch(function(error) {
-        console.log("Music could not start:", error);
-    });
+    /* START SONG */
+    music.play();
 
-    /* Fade away opening screen */
+    /* FADE OPENING SCREEN */
     opening.style.opacity = "0";
 
     setTimeout(function() {
         opening.style.display = "none";
     }, 1000);
-
 }
 
 </script>
